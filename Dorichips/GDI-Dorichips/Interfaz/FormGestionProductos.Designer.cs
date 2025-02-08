@@ -32,7 +32,7 @@
             btnVD = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
-            btnEditarProductos = new Button();
+            btnEP = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -50,8 +50,9 @@
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.ScrollBar;
+            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(47, 78);
+            dataGridView1.Location = new Point(47, 101);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(714, 342);
             dataGridView1.TabIndex = 2;
@@ -68,18 +69,18 @@
             label1.TabIndex = 3;
             label1.Text = "Productos Dorichips";
             // 
-            // btnEditarProductos
+            // btnEP
             // 
-            btnEditarProductos.BackColor = Color.FromArgb(0, 0, 192);
-            btnEditarProductos.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditarProductos.ForeColor = SystemColors.Window;
-            btnEditarProductos.Location = new Point(548, 20);
-            btnEditarProductos.Name = "btnEditarProductos";
-            btnEditarProductos.Size = new Size(213, 52);
-            btnEditarProductos.TabIndex = 6;
-            btnEditarProductos.Text = "Edición de Productos";
-            btnEditarProductos.UseVisualStyleBackColor = false;
-            btnEditarProductos.Click += btnEditarProductos_Click;
+            btnEP.BackColor = Color.FromArgb(0, 0, 192);
+            btnEP.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEP.ForeColor = Color.White;
+            btnEP.Location = new Point(548, 28);
+            btnEP.Name = "btnEP";
+            btnEP.Size = new Size(213, 52);
+            btnEP.TabIndex = 6;
+            btnEP.Text = "Edición de Productos";
+            btnEP.UseVisualStyleBackColor = false;
+            btnEP.Click += btnEditarProductos_Click;
             // 
             // FormGestionProductos
             // 
@@ -87,13 +88,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
-            Controls.Add(btnEditarProductos);
+            ClientSize = new Size(800, 475);
+            Controls.Add(btnEP);
             Controls.Add(label1);
             Controls.Add(dataGridView1);
             Controls.Add(btnVD);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormGestionProductos";
-            Text = "FormGestionProductos";
+            Text = "DORICHIPS";
+            Load += FormGestionProductos_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -104,6 +107,6 @@
         private Button btnVD;
         private DataGridView dataGridView1;
         private Label label1;
-        private Button btnEditarProductos;
+        private Button btnEP;
     }
 }

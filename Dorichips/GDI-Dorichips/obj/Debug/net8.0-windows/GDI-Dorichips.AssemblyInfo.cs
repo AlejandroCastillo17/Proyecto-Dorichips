@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GDI-Dorichips")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5103b552e68bdd43ac25fd7318dfabc0449ec52")]
 [assembly: System.Reflection.AssemblyProductAttribute("GDI-Dorichips")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GDI-Dorichips")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

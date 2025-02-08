@@ -35,7 +35,7 @@
             // 
             // btnContinuar
             // 
-            btnContinuar.BackColor = Color.FromArgb(255, 128, 0);
+            btnContinuar.BackColor = Color.FromArgb(255, 129, 0);
             btnContinuar.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnContinuar.ForeColor = SystemColors.Window;
             btnContinuar.Location = new Point(318, 397);
@@ -70,8 +70,10 @@
             ClientSize = new Size(800, 475);
             Controls.Add(label1);
             Controls.Add(btnContinuar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormInicio";
-            Text = "Inicio";
+            Text = "DORICHIPS";
+            Load += FormInicio_Load;
             ResumeLayout(false);
             PerformLayout();
         }

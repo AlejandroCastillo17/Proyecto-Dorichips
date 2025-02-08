@@ -18,11 +18,36 @@ namespace GDI_Dorichips
         {
             InitializeComponent();
             CargarProductos();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(200, 100);
+            this.MaximizeBox = false;
+            btnVD.MouseEnter += btnVD_MouseEnter;
+            btnVD.MouseLeave += btnVD_MouseLeave;
+
+            btnAgregarP.MouseEnter += btnAgregarP_MouseEnter;
+            btnAgregarP.MouseLeave += btnAgregarP_MouseLeave;
+
+            btnAceptarPe.MouseEnter += btnAceptarPe_MouseEnter;
+            btnAceptarPe.MouseLeave += btnAceptarPe_MouseLeave;
+
+            btnEliminarP.MouseEnter += btnEliminarP_MouseEnter;
+            btnEliminarP.MouseLeave += btnEliminarP_MouseLeave;
         }
 
         private void CargarProductos()
         {
             // Ejemplo: DGproductos.DataSource = GetProductsFromDatabase();
+        }
+
+        private void btnVD_MouseEnter(object sender, EventArgs e)
+        {
+            btnVD.Size = new Size(66, 58);
+            btnVD.BackColor = Color.White;
+        }
+
+        private void btnVD_MouseLeave(object sender, EventArgs e)
+        {
+            btnVD.Size = new Size(60, 56);
         }
 
         private List<Productos> pedido = new List<Productos>();
@@ -43,7 +68,7 @@ namespace GDI_Dorichips
                 else
                 {
                     // Agregar el producto al pedido con cantidad 1
-                    Pselecionado.cantidad = 1; 
+                    Pselecionado.cantidad = 1;
                     pedido.Add(Pselecionado);
                 }
                 actualizarpedido(); // Actualiza el grid de pedidos y el resumen
@@ -74,9 +99,38 @@ namespace GDI_Dorichips
 
         private void btnVD_Click(object sender, EventArgs e)
         {
-            FormMenu menu = new FormMenu();
-            menu.Show();
-            this.Hide();
+            System.Windows.Forms.Timer fadeOut = new System.Windows.Forms.Timer();
+            fadeOut.Interval = 15;
+            fadeOut.Tick += (s, ev) =>
+            {
+                if (this.Opacity > 0.1)
+                {
+                    this.Opacity -= 0.1;
+                }
+                else
+                {
+                    fadeOut.Stop();
+                    FormMenu menu = new FormMenu();
+                    menu.Opacity = 0;
+                    menu.Show();
+                    System.Windows.Forms.Timer fadeIn = new System.Windows.Forms.Timer();
+                    fadeIn.Interval = 15;
+                    fadeIn.Tick += (s2, ev2) =>
+                    {
+                        if (menu.Opacity < 1.0)
+                        {
+                            menu.Opacity += 0.1;
+                        }
+                        else
+                        {
+                            fadeIn.Stop();
+                            this.Hide();
+                        }
+                    };
+                    fadeIn.Start();
+                }
+            };
+            fadeOut.Start();
         }
 
         private void btnEliminarP_Click(object sender, EventArgs e)
@@ -135,6 +189,56 @@ namespace GDI_Dorichips
         }
 
         private void DGpedido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        //btnAgregarP
+        private void btnAgregarP_MouseEnter(object sender, EventArgs e)
+        {
+            btnAgregarP.Size = new Size(162, 52);
+            btnAgregarP.BackColor = Color.Green;
+            btnAgregarP.ForeColor = Color.White;
+        }
+
+        private void btnAgregarP_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregarP.Size = new Size(156, 50);
+            btnAgregarP.BackColor = Color.LimeGreen;
+            btnAgregarP.ForeColor = Color.Black;
+        }
+
+        // btnAceptarPe
+        private void btnAceptarPe_MouseEnter(object sender, EventArgs e)
+        {
+            btnAceptarPe.Size = new Size(81, 79);
+            btnAceptarPe.BackColor = Color.Green;
+            btnAceptarPe.ForeColor = Color.White;
+        }
+
+        private void btnAceptarPe_MouseLeave(object sender, EventArgs e)
+        {
+            btnAceptarPe.Size = new Size(75, 77);
+            btnAceptarPe.BackColor = Color.LimeGreen;
+            btnAceptarPe.ForeColor = Color.Black;
+        }
+
+        // btnEliminarP 
+        private void btnEliminarP_MouseEnter(object sender, EventArgs e)
+        {
+            btnEliminarP.Size = new Size(81, 79);
+            btnEliminarP.BackColor = Color.Red;
+            btnEliminarP.ForeColor = Color.White;
+        }
+
+        private void btnEliminarP_MouseLeave(object sender, EventArgs e)
+        {
+            btnEliminarP.Size = new Size(75, 77);
+            btnEliminarP.BackColor = Color.Firebrick;
+            btnEliminarP.ForeColor = Color.Black;
+        }
+
+        private void FormDiaDia_Load(object sender, EventArgs e)
         {
 
         }

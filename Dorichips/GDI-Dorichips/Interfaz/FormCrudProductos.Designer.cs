@@ -32,14 +32,14 @@ namespace GDI_Dorichips
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrudProductos));
             btnVD = new Button();
             picFotoProducto = new PictureBox();
-            label1 = new Label();
-            label2 = new Label();
             panel1 = new Panel();
-            txtID = new TextBox();
-            label3 = new Label();
             btnAgregar = new Button();
-            txtPrePro = new TextBox();
+            label3 = new Label();
+            label1 = new Label();
+            label4 = new Label();
             txtNomPro = new TextBox();
+            txtPrePro = new TextBox();
+            txtID = new TextBox();
             ((System.ComponentModel.ISupportInitialize)picFotoProducto).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -57,6 +57,10 @@ namespace GDI_Dorichips
             // 
             // picFotoProducto
             // 
+            picFotoProducto.BackColor = SystemColors.Window;
+            picFotoProducto.BackgroundImage = Properties.Resources.icodori;
+            picFotoProducto.BackgroundImageLayout = ImageLayout.Stretch;
+            picFotoProducto.BorderStyle = BorderStyle.Fixed3D;
             picFotoProducto.Location = new Point(18, 15);
             picFotoProducto.Name = "picFotoProducto";
             picFotoProducto.Size = new Size(173, 174);
@@ -64,78 +68,100 @@ namespace GDI_Dorichips
             picFotoProducto.TabStop = false;
             picFotoProducto.Click += picFotoProducto_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(336, 24);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Producto";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(473, 22);
-            label2.Name = "label2";
-            label2.Size = new Size(40, 15);
-            label2.TabIndex = 6;
-            label2.Text = "Precio";
-            // 
             // panel1
             // 
+            panel1.BackColor = SystemColors.ScrollBar;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(btnAgregar);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label4);
             panel1.Controls.Add(txtNomPro);
             panel1.Controls.Add(txtPrePro);
             panel1.Controls.Add(txtID);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(btnAgregar);
             panel1.Controls.Add(picFotoProducto);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(103, 32);
+            panel1.Location = new Point(90, 58);
             panel1.Name = "panel1";
             panel1.Size = new Size(646, 369);
             panel1.TabIndex = 8;
             // 
-            // txtID
+            // btnAgregar
             // 
-            txtID.Location = new Point(197, 51);
-            txtID.Name = "txtID";
-            txtID.Size = new Size(100, 23);
-            txtID.TabIndex = 11;
+            btnAgregar.BackColor = Color.FromArgb(255, 128, 0);
+            btnAgregar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregar.ForeColor = Color.White;
+            btnAgregar.Location = new Point(351, 100);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(109, 41);
+            btnAgregar.TabIndex = 17;
+            btnAgregar.Text = "Agregar";
+            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click_1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(197, 24);
+            label3.BackColor = Color.Blue;
+            label3.BorderStyle = BorderStyle.Fixed3D;
+            label3.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.MenuBar;
+            label3.Location = new Point(495, 22);
             label3.Name = "label3";
-            label3.Size = new Size(18, 15);
-            label3.TabIndex = 10;
-            label3.Text = "ID";
+            label3.Size = new Size(78, 25);
+            label3.TabIndex = 16;
+            label3.Text = "Producto";
             // 
-            // btnAgregar
+            // label1
             // 
-            btnAgregar.Location = new Point(238, 106);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
-            btnAgregar.TabIndex = 9;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += button1_Click;
+            label1.AutoSize = true;
+            label1.BackColor = Color.FromArgb(255, 128, 0);
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.MenuBar;
+            label1.Location = new Point(361, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(78, 25);
+            label1.TabIndex = 15;
+            label1.Text = "Producto";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Blue;
+            label4.BorderStyle = BorderStyle.Fixed3D;
+            label4.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.MenuBar;
+            label4.Location = new Point(238, 22);
+            label4.Name = "label4";
+            label4.Size = new Size(33, 25);
+            label4.TabIndex = 14;
+            label4.Text = "ID";
+            label4.Click += label4_Click;
+            // 
+            // txtNomPro
+            // 
+            txtNomPro.Location = new Point(351, 51);
+            txtNomPro.MaxLength = 50;
+            txtNomPro.Name = "txtNomPro";
+            txtNomPro.Size = new Size(100, 23);
+            txtNomPro.TabIndex = 13;
             // 
             // txtPrePro
             // 
-            txtPrePro.Location = new Point(473, 51);
+            txtPrePro.Location = new Point(484, 51);
+            txtPrePro.MaxLength = 50;
             txtPrePro.Name = "txtPrePro";
             txtPrePro.Size = new Size(100, 23);
             txtPrePro.TabIndex = 12;
             // 
-            // txtNomPro
+            // txtID
             // 
-            txtNomPro.Location = new Point(326, 51);
-            txtNomPro.Name = "txtNomPro";
-            txtNomPro.Size = new Size(100, 23);
-            txtNomPro.TabIndex = 13;
+            txtID.Location = new Point(213, 51);
+            txtID.MaxLength = 8;
+            txtID.Name = "txtID";
+            txtID.Size = new Size(100, 23);
+            txtID.TabIndex = 11;
+            txtID.TextChanged += txtID_TextChanged;
             // 
             // FormCrudProductos
             // 
@@ -143,11 +169,13 @@ namespace GDI_Dorichips
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 475);
             Controls.Add(panel1);
             Controls.Add(btnVD);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormCrudProductos";
-            Text = "FormCrudProductos";
+            Text = "DORICHIPS";
+            Load += FormCrudProductos_Load;
             ((System.ComponentModel.ISupportInitialize)picFotoProducto).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -178,13 +206,13 @@ namespace GDI_Dorichips
 
         private Button btnVD;
         private PictureBox picFotoProducto;
-        private Label label1;
-        private Label label2;
         private Panel panel1;
-        private Button btnAgregar;
         private TextBox txtID;
-        private Label label3;
         private TextBox txtNomPro;
         private TextBox txtPrePro;
+        private Label label4;
+        private Label label1;
+        private Label label3;
+        private Button btnAgregar;
     }
 }

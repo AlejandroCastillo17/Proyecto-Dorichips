@@ -49,10 +49,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 475);
             Controls.Add(btnVD);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormInforme";
-            Text = "FormInforme";
+            Text = "DORICHIPS";
+            Load += FormInforme_Load;
             ResumeLayout(false);
         }
 

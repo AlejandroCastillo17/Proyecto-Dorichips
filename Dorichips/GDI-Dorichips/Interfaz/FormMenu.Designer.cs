@@ -106,14 +106,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 475);
             Controls.Add(btnVinforme);
             Controls.Add(btnInventario);
             Controls.Add(btnGestorProductos);
             Controls.Add(btnInciarDia);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMenu";
-            Text = "FormMenu";
+            Text = "DORICHIPS";
+            Load += FormMenu_Load;
             ResumeLayout(false);
             PerformLayout();
         }

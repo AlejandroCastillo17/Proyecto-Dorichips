@@ -54,7 +54,7 @@ namespace GDI_Dorichips
             btnVD.Image = (Image)resources.GetObject("btnVD.Image");
             btnVD.Location = new Point(12, 12);
             btnVD.Name = "btnVD";
-            btnVD.Size = new Size(60, 50);
+            btnVD.Size = new Size(60, 56);
             btnVD.TabIndex = 0;
             btnVD.UseVisualStyleBackColor = false;
             btnVD.Click += btnVD_Click;
@@ -83,9 +83,9 @@ namespace GDI_Dorichips
             // 
             btnAgregarP.BackColor = Color.LimeGreen;
             btnAgregarP.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregarP.Location = new Point(46, 331);
+            btnAgregarP.Location = new Point(43, 331);
             btnAgregarP.Name = "btnAgregarP";
-            btnAgregarP.Size = new Size(156, 62);
+            btnAgregarP.Size = new Size(156, 50);
             btnAgregarP.TabIndex = 3;
             btnAgregarP.Text = "Agregar al pedido";
             btnAgregarP.UseVisualStyleBackColor = false;
@@ -142,7 +142,7 @@ namespace GDI_Dorichips
             panel1.Controls.Add(DGproductos);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnAgregarP);
-            panel1.Location = new Point(78, 30);
+            panel1.Location = new Point(100, 43);
             panel1.Name = "panel1";
             panel1.Size = new Size(250, 393);
             panel1.TabIndex = 8;
@@ -155,7 +155,7 @@ namespace GDI_Dorichips
             panel2.Controls.Add(label2);
             panel2.Controls.Add(btnEliminarP);
             panel2.Controls.Add(btnAceptarPe);
-            panel2.Location = new Point(398, 33);
+            panel2.Location = new Point(420, 46);
             panel2.Name = "panel2";
             panel2.Size = new Size(330, 357);
             panel2.TabIndex = 9;
@@ -173,12 +173,14 @@ namespace GDI_Dorichips
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 475);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(btnVD);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormDiaDia";
-            Text = "FormDiaDia";
+            Text = "DORICHIPS";
+            Load += FormDiaDia_Load;
             ((System.ComponentModel.ISupportInitialize)DGproductos).EndInit();
             ((System.ComponentModel.ISupportInitialize)DGpedido).EndInit();
             panel1.ResumeLayout(false);
