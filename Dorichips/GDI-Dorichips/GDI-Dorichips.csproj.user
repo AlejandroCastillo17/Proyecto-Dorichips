@@ -1,16 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\juana\Source\Repos\Dorichips\Dorichips\GDI-Dorichips\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Update="Interfaz\FormActualizarCantidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Interfaz\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Interfaz\FormCrudProductos.cs">
+    <Compile Update="Interfaz\FormAgregarMateriaPrima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\FormAgregarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\FormAsignarIngredientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Interfaz\FormDiaDia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Interfaz\FormGestionProductos.cs">
+    <Compile Update="Interfaz\FormGestProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Interfaz\FormInforme.cs">

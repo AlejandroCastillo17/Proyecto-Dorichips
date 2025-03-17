@@ -34,6 +34,8 @@
             btnGestorProductos = new Button();
             btnInventario = new Button();
             btnVinforme = new Button();
+            label2 = new Label();
+            label3 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -100,6 +102,30 @@
             btnVinforme.UseVisualStyleBackColor = false;
             btnVinforme.Click += button1_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.GrayText;
+            label2.Location = new Point(-1, 453);
+            label2.Name = "label2";
+            label2.Size = new Size(79, 22);
+            label2.TabIndex = 8;
+            label2.Text = "V.1.0.0 ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial Rounded MT Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.GrayText;
+            label3.Location = new Point(718, 453);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 22);
+            label3.TabIndex = 9;
+            label3.Text = "By Alejo";
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -107,6 +133,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 475);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(btnVinforme);
             Controls.Add(btnInventario);
             Controls.Add(btnGestorProductos);
@@ -127,5 +155,7 @@
         private Button btnGestorProductos;
         private Button btnInventario;
         private Button btnVinforme;
+        private Label label2;
+        private Label label3;
     }
 }

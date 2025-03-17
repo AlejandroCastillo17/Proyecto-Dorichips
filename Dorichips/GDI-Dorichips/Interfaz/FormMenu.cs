@@ -36,7 +36,7 @@ namespace GDI_Dorichips
         private void btnInciarDia_MouseEnter(object sender, EventArgs e)
         {
             btnInciarDia.Size = new Size(286, 46);
-            btnInciarDia.BackColor = Color.FromArgb(255, 189, 0); ;
+            btnInciarDia.BackColor = Color.FromArgb(255, 189, 0);
             btnInciarDia.ForeColor = Color.White;
         }
 
@@ -107,7 +107,7 @@ namespace GDI_Dorichips
                 else
                 {
                     fadeOut.Stop();
-                    FormGestionProductos gestionproductos = new FormGestionProductos();
+                    FormGestProductos gestionproductos = new FormGestProductos();
                     gestionproductos.Opacity = 0;
                     gestionproductos.Show();
                     System.Windows.Forms.Timer fadeIn = new System.Windows.Forms.Timer();

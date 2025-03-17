@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GDI_Dorichips.Logica
 {
-    internal class Productos
+    public class Productos
     {
         public int id { get; set; }
         public string nombre { get; set; }    

@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\juana\\Source\\Repos\\Dorichips\\Dorichips\\GDI-Dorichips\\GDI-Dorichips.csproj",
-        "projectName": "GDI-Dorichips",
+        "projectName": "GDI_Dorichips",
         "projectPath": "C:\\Users\\juana\\Source\\Repos\\Dorichips\\Dorichips\\GDI-Dorichips\\GDI-Dorichips.csproj",
         "packagesPath": "C:\\Users\\juana\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\juana\\Source\\Repos\\Dorichips\\Dorichips\\GDI-Dorichips\\obj\\",
@@ -49,6 +49,20 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.2.0, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

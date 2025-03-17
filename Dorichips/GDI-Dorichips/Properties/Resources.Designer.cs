@@ -69,5 +69,15 @@ namespace GDI_Dorichips.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Image_20250211_161118_980 {
+            get {
+                object obj = ResourceManager.GetObject("Image_20250211_161118_980", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

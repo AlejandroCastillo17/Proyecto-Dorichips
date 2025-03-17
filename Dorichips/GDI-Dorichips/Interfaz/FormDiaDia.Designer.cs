@@ -41,7 +41,9 @@ namespace GDI_Dorichips
             label2 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
-            txbSumaPedido = new TextBox();
+            txtCliente = new TextBox();
+            lblTotal = new Label();
+            txbObservacion = new TextBox();
             ((System.ComponentModel.ISupportInitialize)DGproductos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DGpedido).BeginInit();
             panel1.SuspendLayout();
@@ -62,18 +64,18 @@ namespace GDI_Dorichips
             // DGproductos
             // 
             DGproductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGproductos.Location = new Point(0, 41);
+            DGproductos.Location = new Point(-1, 41);
             DGproductos.Name = "DGproductos";
-            DGproductos.Size = new Size(248, 284);
+            DGproductos.Size = new Size(274, 305);
             DGproductos.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
+            label1.BackColor = Color.FromArgb(255, 128, 0);
             label1.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Window;
-            label1.Location = new Point(0, 3);
+            label1.Location = new Point(16, 3);
             label1.Name = "label1";
             label1.Size = new Size(244, 35);
             label1.TabIndex = 2;
@@ -83,7 +85,7 @@ namespace GDI_Dorichips
             // 
             btnAgregarP.BackColor = Color.LimeGreen;
             btnAgregarP.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregarP.Location = new Point(43, 331);
+            btnAgregarP.Location = new Point(59, 352);
             btnAgregarP.Name = "btnAgregarP";
             btnAgregarP.Size = new Size(156, 50);
             btnAgregarP.TabIndex = 3;
@@ -94,9 +96,9 @@ namespace GDI_Dorichips
             // DGpedido
             // 
             DGpedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGpedido.Location = new Point(-3, 38);
+            DGpedido.Location = new Point(0, 38);
             DGpedido.Name = "DGpedido";
-            DGpedido.Size = new Size(330, 161);
+            DGpedido.Size = new Size(353, 170);
             DGpedido.TabIndex = 4;
             DGpedido.CellContentClick += DGpedido_CellContentClick;
             // 
@@ -104,7 +106,7 @@ namespace GDI_Dorichips
             // 
             btnAceptarPe.BackColor = Color.LimeGreen;
             btnAceptarPe.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAceptarPe.Location = new Point(38, 245);
+            btnAceptarPe.Location = new Point(72, 327);
             btnAceptarPe.Name = "btnAceptarPe";
             btnAceptarPe.Size = new Size(75, 77);
             btnAceptarPe.TabIndex = 5;
@@ -116,7 +118,7 @@ namespace GDI_Dorichips
             // 
             btnEliminarP.BackColor = Color.Firebrick;
             btnEliminarP.Font = new Font("Comic Sans MS", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminarP.Location = new Point(189, 245);
+            btnEliminarP.Location = new Point(203, 327);
             btnEliminarP.Name = "btnEliminarP";
             btnEliminarP.Size = new Size(75, 77);
             btnEliminarP.TabIndex = 6;
@@ -127,45 +129,70 @@ namespace GDI_Dorichips
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.BackColor = Color.Blue;
+            label2.Font = new Font("Comic Sans MS", 17.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.Window;
-            label2.Location = new Point(62, 0);
+            label2.Location = new Point(98, 3);
             label2.Name = "label2";
-            label2.Size = new Size(172, 35);
+            label2.Size = new Size(166, 32);
             label2.TabIndex = 7;
             label2.Text = "Pedido Actual";
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ControlDarkDark;
+            panel1.BackColor = Color.FromArgb(255, 128, 0);
+            panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(DGproductos);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnAgregarP);
-            panel1.Location = new Point(100, 43);
+            panel1.Location = new Point(88, 25);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 393);
+            panel1.Size = new Size(275, 414);
             panel1.TabIndex = 8;
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.ControlDarkDark;
-            panel2.Controls.Add(txbSumaPedido);
+            panel2.BackColor = Color.Blue;
+            panel2.Controls.Add(txtCliente);
+            panel2.Controls.Add(lblTotal);
+            panel2.Controls.Add(txbObservacion);
             panel2.Controls.Add(DGpedido);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(btnEliminarP);
             panel2.Controls.Add(btnAceptarPe);
-            panel2.Location = new Point(420, 46);
+            panel2.Location = new Point(418, 25);
             panel2.Name = "panel2";
-            panel2.Size = new Size(330, 357);
+            panel2.Size = new Size(353, 414);
             panel2.TabIndex = 9;
             // 
-            // txbSumaPedido
+            // txtCliente
             // 
-            txbSumaPedido.Location = new Point(0, 205);
-            txbSumaPedido.Name = "txbSumaPedido";
-            txbSumaPedido.Size = new Size(327, 23);
-            txbSumaPedido.TabIndex = 8;
+            txtCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtCliente.Location = new Point(13, 257);
+            txtCliente.Name = "txtCliente";
+            txtCliente.PlaceholderText = "Nombre del cliente";
+            txtCliente.Size = new Size(327, 29);
+            txtCliente.TabIndex = 10;
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.BackColor = Color.Blue;
+            lblTotal.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotal.ForeColor = SystemColors.Window;
+            lblTotal.Location = new Point(81, 217);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(0, 30);
+            lblTotal.TabIndex = 9;
+            // 
+            // txbObservacion
+            // 
+            txbObservacion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbObservacion.Location = new Point(13, 292);
+            txbObservacion.Name = "txbObservacion";
+            txbObservacion.PlaceholderText = "Observaciones del pedido";
+            txbObservacion.Size = new Size(327, 29);
+            txbObservacion.TabIndex = 8;
             // 
             // FormDiaDia
             // 
@@ -210,6 +237,8 @@ namespace GDI_Dorichips
         private Label label2;
         private Panel panel1;
         private Panel panel2;
-        private TextBox txbSumaPedido;
+        private TextBox txbObservacion;
+        private Label lblTotal;
+        private TextBox txtCliente;
     }
 }
